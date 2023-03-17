@@ -11,6 +11,7 @@ export const calculateBarPercentage = (goal, raisedAmount) => {
   return percentage;
 };
 
+// Checks image url
 export const checkIfImage = (url, callback) => {
   const img = new Image();
   img.src = url;

@@ -4,12 +4,15 @@ import { useNavigate } from "react-router-dom";
 // utility library that allows us to interact with our smart contract
 import { ethers } from "ethers";
 
+import { useStateContext } from "../context";
+
 import { money } from "../assets";
 import { CustomButton, FormField } from "../components";
 import { checkIfImage } from "../utils";
 
 const CreateCampaign = () => {
   const navigate = useNavigate();
+  const { createCampaign } = useStateContext();
   const [isLoading, setIsLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -25,10 +28,26 @@ const CreateCampaign = () => {
     setForm({ ...form, [fieldName]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     // prevents reloading of page after submitting form
     e.preventDefault();
-    console.log(form);
+
+    checkIfImage(form.image, async (exists) => {
+      if (exists) {
+        setIsLoading(true);
+        // changing eth to wei amount
+        await createCampaign({
+          ...form,
+          target: ethers.utils.parseUnits(form.target, 18),
+        });
+        setIsLoading(false);
+        navigate("/");
+      } else {
+        alert("Provide valid image URL");
+        // spreads and keeps entire form input, but resets image input
+        setForm({ ...form, image: "" });
+      }
+    });
   };
 
   return (

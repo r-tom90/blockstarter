@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import { useStateContext } from "../context";
+
 import { CustomButton } from "./";
 
 import { logo, menu, search, thirdweb } from "../assets";
 
 import { navlinks } from "../constants";
-import { ConnectWallet } from "@thirdweb-dev/react";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState("dashboard");
   const [toggleDrawer, setToggleDrawer] = useState(false);
-
-  //   Temporary Hardcoded address
-  const address = "0xsomething";
+  const { connect, address } = useStateContext();
 
   return (
     <div className="mb-[35px] flex flex-col-reverse justify-between gap-6 md:flex-row">
@@ -44,7 +43,7 @@ const Navbar = () => {
           styles={address ? "bg-[#1dc071]" : "bg-[#8b6dfd]"}
           //   handleClick, if address exists, navigate to create-campaign, else connect to web3 wallet,
           handleClick={() => {
-            address ? navigate("create-campaign") : ConnectWallet();
+            address ? navigate("create-campaign") : connect();
           }}
         />
         <Link to="/profile">
@@ -68,7 +67,7 @@ const Navbar = () => {
                 currently static user image allow for change later one
                  */}
           <img
-            src={thirdweb}
+            src={logo}
             alt="user"
             className="h-[60%] w-[60%] object-contain"
           />
@@ -128,7 +127,7 @@ const Navbar = () => {
             styles={address ? "bg-[#1dc071]" : "bg-[#8b6dfd]"}
             //   handleClick, if address exists, navigate to create-campaign, else connect to web3 wallet,
             handleClick={() => {
-              address ? navigate("create-campaign") : ConnectWallet();
+              address ? navigate("create-campaign") : connect();
             }}
           />
         </div>
