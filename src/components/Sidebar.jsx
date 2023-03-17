@@ -32,7 +32,7 @@ const Sidebar = () => {
   return (
     <div className="sticky top-5 flex h-[93vh] flex-col items-center justify-between">
       <Link to="/">
-        <Icon styles="w-[52px] h-[52px] bg-[#2c2f32]" imgUrl={logo} />
+        <Icon styles="w-[px] h-[52px] bg-[#2c2f32]" imgUrl={logo} />
       </Link>
 
       <div className="mt-12 flex w-[76px] flex-1 flex-col items-center justify-between rounded-[20px] bg-[#1c1c24] py-4">
