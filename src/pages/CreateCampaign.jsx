@@ -7,7 +7,7 @@ import { ethers } from "ethers";
 import { useStateContext } from "../context";
 
 import { money } from "../assets";
-import { CustomButton, FormField } from "../components";
+import { CustomButton, FormField, Loader } from "../components";
 import { checkIfImage } from "../utils";
 
 const CreateCampaign = () => {
@@ -52,7 +52,7 @@ const CreateCampaign = () => {
 
   return (
     <div className="flex flex-col items-center justify-center rounded-[10px] bg-[#1c1c24] p-4 sm:p-10">
-      {isLoading && "Loader..."}
+      {isLoading && <Loader />}
       <div className="flex items-center justify-center rounded-[10px] bg-[#3a3a43] p-[16px] sm:min-w-[380px]">
         <h1 className="font-epilogue text-[18px] font-bold leading-[38px] text-white sm:text-[25px]">
           Start a Campaign

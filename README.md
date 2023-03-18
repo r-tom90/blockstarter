@@ -94,8 +94,15 @@ Interactive Contact Page:
 
 ### Continued development
 
-- Implementation of:
+- Minor:
+
+  - [x] Hover & Active color change for Button interactions
+  - [] Logo
+  - [] Tooltip
+
+- Major:
   - [] Light Mode
+  - [] Withdrawal of funds
   - [] Certain areas to require NFT Gated Web3 Authentication
 
 ## Author
