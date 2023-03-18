@@ -23,12 +23,7 @@ const Navbar = () => {
           placeholder="Search for Campaigns"
           className="flex w-full bg-transparent font-epilogue text-[14px] font-normal text-white outline-none placeholder:text-[#4b5264]"
         />
-        {/* Search button 
-        TODO: 
-        - Hover: Color change
-        - Active click color change
-        */}
-        <div className="flex h-full w-[72px] cursor-pointer items-center justify-center rounded-[20px] bg-[#4acd8d]">
+        <div className="flex h-full w-[72px] cursor-pointer items-center justify-center rounded-[20px] bg-[#1dc071] hover:bg-[#1ab071] active:bg-[#0aa071]">
           <img
             src={search}
             alt="search"
@@ -40,7 +35,11 @@ const Navbar = () => {
         <CustomButton
           btnType="button"
           title={address ? "Create a campaign" : "Connect"}
-          styles={address ? "bg-[#1dc071]" : "bg-[#8b6dfd]"}
+          styles={
+            address
+              ? "bg-[#1dc071] hover:bg-[#1ab071] active:bg-[#0aa071]"
+              : "bg-[#8b6dfd]"
+          }
           //   handleClick, if address exists, navigate to create-campaign, else connect to web3 wallet,
           handleClick={() => {
             address ? navigate("create-campaign") : connect();
@@ -111,7 +110,9 @@ const Navbar = () => {
               />
               <p
                 className={`ml-[20px] font-epilogue text-[14px] font-semibold ${
-                  isActive === link.name ? "text-[#1dc071]" : "text-[#808191]"
+                  isActive === link.name
+                    ? "text-[#1dc071]"
+                    : "text-[#808191] hover:text-[#1dc071] active:text-[#0aa071]"
                 }`}
               >
                 {link.name}
@@ -124,7 +125,11 @@ const Navbar = () => {
           <CustomButton
             btnType="button"
             title={address ? "Create a campaign" : "Connect"}
-            styles={address ? "bg-[#1dc071]" : "bg-[#8b6dfd]"}
+            styles={
+              address
+                ? "bg-[#1dc071] hover:bg-[#1ab071] active:bg-[#0aa071]"
+                : "bg-[#8b6dfd]"
+            }
             //   handleClick, if address exists, navigate to create-campaign, else connect to web3 wallet,
             handleClick={() => {
               address ? navigate("create-campaign") : connect();
