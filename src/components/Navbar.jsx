@@ -5,7 +5,7 @@ import { useStateContext } from "../context";
 
 import { CustomButton } from "./";
 
-import { logo, menu, search, thirdweb } from "../assets";
+import { logoDark, menu, search, thirdweb } from "../assets";
 
 import { navlinks } from "../constants";
 
@@ -17,13 +17,13 @@ const Navbar = () => {
 
   return (
     <div className="mb-[35px] flex flex-col-reverse justify-between gap-6 md:flex-row">
-      <div className="flex h-[52px] max-w-[458px] flex-row rounded-[100px] bg-[#1c1c24] py-2 pl-4 pr-2 lg:flex-1">
+      <div className="flex h-[52px] max-w-[458px] flex-row rounded-[100px] bg-[#1c1c24] py-2 pl-4 pr-2 dark:bg-primary lg:flex-1">
         <input
           type="text"
           placeholder="Search for Campaigns"
-          className="flex w-full bg-transparent font-epilogue text-[14px] font-normal text-white outline-none placeholder:text-[#4b5264]"
+          className="flex w-full bg-transparent font-epilogue text-[14px] font-normal text-white outline-none placeholder:text-[#4b5264] dark:text-black"
         />
-        <div className="flex h-full w-[72px] cursor-pointer items-center justify-center rounded-[20px] bg-[#1dc071] hover:bg-[#1ab071] active:bg-[#0aa071]">
+        <div className="flex h-full w-[72px] cursor-pointer items-center justify-center rounded-[20px] bg-[#1dc071] hover:bg-[#1ab071] active:bg-[#0aa071] dark:bg-secondaryLogo">
           <img
             src={search}
             alt="search"
@@ -37,8 +37,8 @@ const Navbar = () => {
           title={address ? "Create a campaign" : "Connect"}
           styles={
             address
-              ? "bg-[#1dc071] hover:bg-[#1ab071] active:bg-[#0aa071]"
-              : "bg-[#8b6dfd]"
+              ? "bg-[#1dc071] hover:bg-[#1ab071] active:bg-[#0aa071] dark:bg-primaryLogo"
+              : "bg-[#8b6dfd] hover:bg-[#8b0dfd] active:bg-[#8a0dfd] dark:bg-secondaryLogo"
           }
           //   handleClick, if address exists, navigate to create-campaign, else connect to web3 wallet,
           handleClick={() => {
@@ -61,12 +61,12 @@ const Navbar = () => {
 
       {/* //? Small screen navigation */}
       <div className="relative flex items-center justify-between sm:hidden">
-        <div className="flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-[10px] bg-[#2c2f32]">
+        <div className="flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-[10px] bg-[#2c2f32] dark:bg-primary">
           {/* TODO:
                 currently static user image allow for change later one
                  */}
           <img
-            src={logo}
+            src={logoDark}
             alt="user"
             className="h-[60%] w-[60%] object-contain"
           />
@@ -83,7 +83,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`absolute top-[60px] right-0 left-0 z-10 bg-[#1c1c24] py-4 shadow-secondary ${
+        className={`absolute top-[60px] right-0 left-0 z-10 bg-[#1c1c24] py-4 shadow-secondary dark:bg-light ${
           !toggleDrawer ? "-translate-y-[100vh]" : "-translate-y-0"
         } transition-all duration-700`}
       >
@@ -92,7 +92,7 @@ const Navbar = () => {
             <li
               key={link.name}
               className={`flex cursor-pointer p-4 ${
-                isActive === link.name && "bg-[#3a3a43]"
+                isActive === link.name && "bg-[#3a3a43] dark:bg-primary"
               }`}
               onClick={() => {
                 setIsActive(link.name);
@@ -127,8 +127,8 @@ const Navbar = () => {
             title={address ? "Create a campaign" : "Connect"}
             styles={
               address
-                ? "bg-[#1dc071] hover:bg-[#1ab071] active:bg-[#0aa071]"
-                : "bg-[#8b6dfd]"
+                ? "bg-[#1dc071] hover:bg-[#1ab071] active:bg-[#0aa071] dark:bg-primaryLogo"
+                : "bg-[#8b6dfd] hover:bg-[#8b0dfd] active:bg-[#8a0dfd] dark:bg-secondaryLogo"
             }
             //   handleClick, if address exists, navigate to create-campaign, else connect to web3 wallet,
             handleClick={() => {

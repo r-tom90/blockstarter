@@ -17,7 +17,7 @@ const FundCard = ({
 
   return (
     <div
-      className="w-full cursor-pointer rounded-[15px] bg-[#1c1c24] sm:w-[288px]"
+      className="w-full cursor-pointer rounded-[15px] bg-[#1c1c24] dark:bg-neutral-700 sm:w-[288px]"
       onClick={handleClick}
     >
       <img
@@ -31,9 +31,9 @@ const FundCard = ({
           <img
             src={tagType}
             alt="tag"
-            className="h-[17px] w-[17px] object-contain"
+            className="h-[17px] w-[17px] fill-black object-contain"
           />
-          <p className="ml-[12px] mt-[2px] font-epilogue text-[12px] font-medium text-[#808191]">
+          <p className="ml-[12px] mt-[2px] font-epilogue text-[12px] font-medium text-[#808191] dark:text-[#030720]">
             {/* TODO: Change tagType based on category chosen through dropdown, for now hard coded Education */}
             Education
           </p>
@@ -43,7 +43,7 @@ const FundCard = ({
           <h3 className="truncate text-left font-epilogue text-[16px] font-semibold leading-[26px] text-white">
             {title}
           </h3>
-          <p className="mt-[5px] truncate text-left font-epilogue font-normal leading-[18px] text-[#808191]">
+          <p className="mt-[5px] truncate text-left font-epilogue font-normal leading-[18px] text-[#808191] dark:text-[#030720]">
             {description}
           </p>
         </div>
@@ -54,7 +54,7 @@ const FundCard = ({
               {/* TODO: Hard coded ETH for now, future works would be a choice of crypto to donate with */}
               {amountCollected} ETH
             </h4>
-            <p className="mt-[3px] truncate font-epilogue text-[12px] font-normal leading-[18px] text-[#808191] sm:max-w-[120px]">
+            <p className="mt-[3px] truncate font-epilogue text-[12px] font-normal leading-[18px] text-[#808191] dark:text-[#030720] sm:max-w-[120px]">
               {/* TODO: Hard coded ETH for now, future works would be a choice of crypto to donate with */}
               Raised of {target} ETH
             </p>
@@ -63,7 +63,7 @@ const FundCard = ({
             <h4 className="font-epilogue text-[14px] font-semibold leading-[22px] text-[#b2b3bd]">
               {remainingDays}
             </h4>
-            <p className="mt-[3px] truncate font-epilogue text-[12px] font-normal leading-[18px] text-[#808191] sm:max-w-[120px]">
+            <p className="mt-[3px] truncate font-epilogue text-[12px] font-normal leading-[18px] text-[#808191] dark:text-[#030720] sm:max-w-[120px]">
               Days Left
             </p>
           </div>
@@ -72,13 +72,13 @@ const FundCard = ({
         <div className="mt-[20px] flex items-center gap-[12px]">
           <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#13131a]">
             <img
-            // TODO: Hard coded ThirdWeb for now, future works would be a choice of display pic or wallet QR code
+              // TODO: Hard coded ThirdWeb for now, future works would be a choice of display pic or wallet QR code
               src={thirdweb}
               alt="user"
               className="h-1/2 w-1/2 object-contain"
             />
           </div>
-          <p className="flex-1 truncate font-epilogue text-[12px] font-normal text-[#808191]">
+          <p className="flex-1 truncate font-epilogue text-[12px] font-normal text-[#808191] dark:text-[#030720]">
             by <span className="text-[#b2b3bd]">{owner}</span>
           </p>
         </div>

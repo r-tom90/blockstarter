@@ -56,16 +56,16 @@ Blockchain version of Kickstarter, this will be continually improved overtime.
 
 ### Screenshot
 
-Interactive Main Page:
+Create Campaign Page:
 ![](./src/assets/screenshots/main.png)
 
-Interactive Contact Page:
+Campaign Description page:
 ![](./src/assets/screenshots/contact.png)
 
 ### Links
 
 - [View Frontend Github Repository](https://github.com/r-tom90/blockstarter)
-- [View Live Site]()
+- [View Live Site](blockstarter-r-tom90.vercel.app)
 - [View Backend Github Repository]()
 
 ## My process
@@ -81,6 +81,7 @@ Interactive Contact Page:
 - Wallet Provider: [Metamask](https://metamask.io/)
 - View transactions: [Goerli Explorer](https://goerli.etherscan.io/)
 - Goerli Faucet: https://goerlifaucet.com/
+- [Goerli RPC](https://www.ankr.com/rpc/eth/eth_goerli/)
 
 ### What I learned
 
@@ -97,12 +98,13 @@ Interactive Contact Page:
 - Minor:
 
   - [x] Hover & Active color change for Button interactions
-  - [] Logo
+  - [x] Logo
   - [] Tooltip
 
 - Major:
-  - [] Light Mode
+  - [x] Light Mode (Main Function done, color changes to come)
   - [] Withdrawal of funds
+  - [] Log Out when clicked
   - [] Certain areas to require NFT Gated Web3 Authentication
 
 ## Author
