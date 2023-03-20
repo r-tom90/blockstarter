@@ -1,41 +1,3 @@
-## Getting Started
-
-Create a project using this example:
-
-```bash
-npx thirdweb create --template vite-javascript-starter
-```
-
-You can start editing the page by modifying `src/main.jsx`. The page auto-updates as you edit the file.
-
-On `src/index.jsx`, you'll find our `ThirdwebProvider` wrapping your app,
-this is necessary for our [hooks](https://portal.thirdweb.com/react) and
-[UI Components](https://portal.thirdweb.com/ui-components) to work.
-
-### Deploy to IPFS
-
-Deploy a copy of your application to IPFS using the following command:
-
-```bash
-yarn deploy
-```
-
-## Learn More
-
-To learn more about thirdweb, Vite and React, take a look at the following resources:
-
-- [thirdweb React Documentation](https://docs.thirdweb.com/react) - learn about our React SDK.
-- [thirdweb JavaScript Documentation](https://docs.thirdweb.com/react) - learn about our JavaScript/TypeScript SDK.
-- [thirdweb Portal](https://docs.thirdweb.com/react) - check our guides and development resources.
-- [Vite Documentation](https://vitejs.dev/guide/) - learn about Vite features.
-- [React documentation](https://reactjs.org/) - learn React.
-
-You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
-
-## Join our Discord!
-
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
-
 # BlockStarter
 
 Blockchain version of Kickstarter, this will be continually improved overtime.
@@ -56,11 +18,17 @@ Blockchain version of Kickstarter, this will be continually improved overtime.
 
 ### Screenshot
 
-Create Campaign Page:
-![](./src/assets/screenshots/main.png)
+Home Page:
+![](./src/screenshot/Screenshot%201.png)
 
 Campaign Description page:
-![](./src/assets/screenshots/contact.png)
+![](./src/screenshot/Screenshot%202.png)
+
+MetaMask Log In:
+![](./src/screenshot/Screenshot%203.png)
+
+Mobile Responsive:
+![](./src/screenshot/Screenshot%204.png)
 
 ### Links
 
@@ -85,13 +53,7 @@ Campaign Description page:
 
 ### What I learned
 
-- Reusable and scalable code using Higher Order Components (HOCs) and other industry-standard best practices.
-- ThreeJS: A powerful 3D graphics library for rendering and animating the 3D model
-- React Three Fiber: a popular library for creating 3D graphics with ThreeJS in React
-- Framer Motion: The most popular library used to bring your React website to life with animations
-- Load, create and customize stunning 3D models and geometries with various lights, as well as understand the 3D world with a camera and positioning of an object in space.
-- Ensure responsiveness across all devices and improve your site's performance using Suspense and Preload.
-- EmailJS: Implement sending emails through a form on the website with only a few lines of code for seamless integration.
+- Responsive Design, connected to the testnet blockchain (Goerli Blockchain), metamask pairing, interaction with smart contracts, sending Goerli Ethereum through the blockchain network, writing solidity code, and, most importantly, the ability to create create, view, and donate to crowdfunding campaigns directly through the blockchain.
 
 ### Continued development
 

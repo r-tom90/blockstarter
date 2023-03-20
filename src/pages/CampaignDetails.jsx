@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 import { useStateContext } from "../context";
 import { CountBox, CustomButton, Loader } from "../components";
 import { calculateBarPercentage, daysLeft } from "../utils";
-import { thirdweb } from "../assets";
+import { logoBlack } from "../assets";
 
 const CampaignDetails = () => {
   // Destructure and allows transfers State through routing with react-router-dom, where useLocation is called as a hook, explained at 2:45:00
@@ -87,7 +87,7 @@ const CampaignDetails = () => {
               <div className="flex h-[52px] w-[52px] cursor-pointer items-center justify-center rounded-full bg-[#2c2f32]">
                 <img
                   // TODO: Hard-Coded logo, change in the future to allow for custom
-                  src={thirdweb}
+                  src={logoBlack}
                   alt="user"
                   className="h-[60%] w-[60%] object-contain"
                 />

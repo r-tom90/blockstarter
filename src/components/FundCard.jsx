@@ -1,6 +1,6 @@
 import React from "react";
 
-import { tagType, thirdweb } from "../assets";
+import { tagType, logoBlack } from "../assets";
 import { daysLeft } from "../utils";
 
 const FundCard = ({
@@ -72,8 +72,8 @@ const FundCard = ({
         <div className="mt-[20px] flex items-center gap-[12px]">
           <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#13131a]">
             <img
-              // TODO: Hard coded ThirdWeb for now, future works would be a choice of display pic or wallet QR code
-              src={thirdweb}
+              // TODO: Hard coded logo for now, future works would be a choice of display pic or wallet QR code
+              src={logoBlack}
               alt="user"
               className="h-1/2 w-1/2 object-contain"
             />

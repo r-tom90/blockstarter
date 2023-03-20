@@ -5,7 +5,7 @@ import { useStateContext } from "../context";
 
 import { CustomButton } from "./";
 
-import { logoDark, menu, search, thirdweb } from "../assets";
+import { logoDark, menu, search, logoBlack } from "../assets";
 
 import { navlinks } from "../constants";
 
@@ -51,7 +51,7 @@ const Navbar = () => {
                 currently static user image allow for change later one
                  */}
             <img
-              src={thirdweb}
+              src={logoBlack}
               alt="user"
               className="h-[60%] w-[60%] object-contain"
             />
